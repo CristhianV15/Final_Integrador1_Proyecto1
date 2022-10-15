@@ -32,11 +32,20 @@ public class ManagedNotificacionCliente {
     @EJB
     NotificacionclienteFacadeLocal notificacionclienteFacadeLocal;
     private Notificacioncliente notificacioncliente;
+    private Libroescolar libroescolar;
     
     @PostConstruct
     public void init() {
-        notificacioncliente = new Notificacioncliente();
+        this.notificacioncliente = new Notificacioncliente();
+        this.libroescolar= new Libroescolar();
     }
+    
+    //Metodos CRUD
+    public void guardarNotificacion(){
+        this.notificacioncliente.setIdLibroEscolar(libroescolar);
+        this.notificacionclienteFacadeLocal.create(notificacioncliente);
+    }
+    
     public void datoCorreo() throws MessagingException{
         String correoEnvia="anon.utp@gmail.com";
         String contrasena= "rixrkyowvrtzuyxm";

@@ -70,6 +70,7 @@ public class Notificacioncliente implements Serializable {
     private Libroescolar idLibroEscolar;
 
     public Notificacioncliente() {
+        estado='0';
     }
 
     public Notificacioncliente(Integer idNotificacionCliente) {
