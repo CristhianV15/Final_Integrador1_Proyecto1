@@ -28,7 +28,8 @@ public class NotificacionclienteFacade extends AbstractFacade<Notificacionclient
     public NotificacionclienteFacade() {
         super(Notificacioncliente.class);
     }
-
+    @Override
+    public void enviarCorreo(Notificacioncliente nc){}
    
     
 }

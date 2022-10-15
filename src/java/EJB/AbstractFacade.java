@@ -8,6 +8,14 @@ package EJB;
 import entidad.Libroescolar;
 import entidad.Notificacioncliente;
 import java.util.List;
+import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
@@ -112,7 +120,5 @@ public abstract class AbstractFacade<T> {
         return query.getResultList();
     }
     
-    public String enviarCorreo(Notificacioncliente nc){
-       return nc.getCorreo();
-    }
+  
 }
