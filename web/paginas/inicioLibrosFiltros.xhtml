@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:outputStylesheet name="/css/estilo2filtros.css"></h:outputStylesheet>  
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+   
+        
+
+        <div class="header">
+            <h1>Tienda de libros escolares</h1>
+            <p>Textos escolares al alcance de tus manos</p>
+        </div>
+
+
+        <div class="topnav">
+            <h:link outcome="/paginas/inicioLibros" value="Inicio"></h:link>
+            <h:link outcome="/paginas/inicioLibrosFiltros" value="Libros"></h:link>
+            <h:form style="float:right">
+                <h:link value="Carro de compras"></h:link>
+            </h:form>
+        </div> 
+
+        <div class="row">
+            <div class="column side">
+                <h2>Filtros</h2>
+                <h:form>
+                    <h:commandButton value="Editorial Bruño" action="inicioBruno.xhtml" class="button button1"></h:commandButton>
+                    <br></br><br></br><br></br>
+                    <h:commandButton value="Editorial Lumbreras" action="inicioLumbreras.xhtml" class="button button1"></h:commandButton>
+                    <h:column>
+                        <br></br><br></br>
+                        <h:outputText value="--------------------------"></h:outputText>
+                        <br></br><br></br>
+                        <h:outputText value="Filtrar por precio"></h:outputText>
+                        <br></br><br></br>
+                        <h:outputLabel value="Ingrese el precio menor"></h:outputLabel>
+                        <br></br><h:inputText label=""></h:inputText>
+                        <br></br><br></br>
+                        <h:outputLabel value="Ingrese el precio mayor"></h:outputLabel>
+                        <br></br>
+                        <h:inputText label=""></h:inputText>
+                        <br></br><br></br>
+                        <h:commandButton value="Filtrar por precio" class="button button2"></h:commandButton>
+                    </h:column>
+                </h:form>
+                <!--Filtrado-->
+                <h:form>
+                <h:panelGrid columns="2">
+                        <h:outputLabel value="Categoria"></h:outputLabel>
+                        <h:inputText class="form-control" value="#{managedLibroEscolar.libroescolar.nombreCategoria}"></h:inputText>
+                        <br></br>
+                        <h:commandButton value="Ingresar" action="#{managedLibroEscolar.validarCategoria()}"></h:commandButton>
+                    </h:panelGrid>
+                    </h:form>
+            </div>
+
+            <div class="column middle">
+
+                <!-- Contenedor Principal  -->
+                <div class="main-wrapper">
+                    <!-- Titulo -->
+                    <h1 class="main-title">Materias</h1>
+
+                    <div class="container">
+                        <!-- Inputs de las Categorias -->
+                        <input name="category-css" id="all" type="radio" ></input>
+                        <input name="category-css" id="webdesign" type="radio"></input>
+                        <input name="category-css" id="webdevelopment" type="radio"></input>
+                        <input name="category-css" id="graphicdesign" type="radio"></input>
+                        <input name="category-css" id="javascript" type="radio"></input>
+
+                        <!-- Categorias -->
+                        <ul class="list-category">
+                            <li><label for="all">Matematica</label></li>
+                            <li><label for="webdesign">Comunicacion</label></li>
+                            <li><label for="webdevelopment">Ciencia y a ambiente</label></li>
+                            <li><label for="graphicdesign">Personal Social</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <h:form>
+                    <div class="libro">
+                        <h:outputLabel id="Matematica" value=""></h:outputLabel>
+
+                        <h:selectOneMenu value="#{managedLibroEscolar.libroescolar.idLibroEscolar}">
+                            <f:selectItems value="#{managedLibroEscolar.listarCategorias}" var="b"
+                                           itemLabel="#{b.nombreCategoria}" 
+                                           itemValue="#{b.nombreCategoria}"></f:selectItems>
+                        </h:selectOneMenu>
+                        <h:dataTable value="#{managedLibroEscolar.listarLibros}" var="l" >
+                            <div class="gallery">
+                                <h:column> 
+                                    <div class="container">
+                                        <h:graphicImage value="#{l.imagen}" width="75%"></h:graphicImage>
+                                        <h:commandButton value="Matematicasdasdasd"  action="#{managedLibroEscolar.listarMatematica(l)}" actionListener="#{managedLibroEscolar.encontrarLibro(l)}"></h:commandButton>
+                                    </div> 
+                                </h:column>
+                                <div class="desc">
+                                    <h:column>
+                                        <p><h:outputText value="#{l.nombreCategoria}"></h:outputText></p>
+                                        <p><h:outputText value="#{l.precio}"></h:outputText></p>
+                                    </h:column>
+                                    <h:column>
+                                        <h:commandButton value="Ver más" actionListener="#{managedLibroEscolar.encontrarLibro(l)}" action="libro_vermas.xhtml"></h:commandButton>
+                                        <h:commandButton value="Agregar al carro"></h:commandButton>
+                                    </h:column>
+                                </div>
+                            </div>
+                        </h:dataTable>
+                    </div>
+                </h:form>
+            </div>
+
+
+        </div>
+
+
+</html>

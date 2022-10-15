@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:outputStylesheet name="/css/miestilo.css"></h:outputStylesheet>
+    <ui:composition template="/template/plantilla.xhtml">
+        <ui:define name="titulo">
+            <h1 class="Titulos">Nuestros ultimos libros</h1>
+        </ui:define>
+        <ui:define name="contenido">
+            <h:form>
+                <h:dataTable value="#{managedLibroEscolar.listarMatematica}" var="l" >
+                        <div class="gallery">
+                            <h:column> 
+                                <div class="container">
+                                    <h:graphicImage value="#{l.imagen}" width="75%"></h:graphicImage>
+                                </div> 
+                            </h:column>
+                            <div class="desc">
+                                <h:column>
+                                    <p><h:outputText value="#{l.nombre}"></h:outputText></p>
+                                    <p><h:outputText value="#{l.precio}"></h:outputText></p>
+                                </h:column>
+                                <h:column>
+                                    <p><h:commandButton value="Ver más"  action="#{managedLibroEscolar.validarStock(l)}" actionListener="#{managedLibroEscolar.encontrarLibro(l)}" ></h:commandButton>
+                                        <h:commandButton value="Agregar al carro"></h:commandButton></p>
+                                </h:column>
+                            </div></div>
+                    </h:dataTable>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</html>
