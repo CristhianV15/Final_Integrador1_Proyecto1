@@ -26,6 +26,9 @@ public class ManagedLibroEscolar {
     LibroescolarFacadeLocal libroescolarFacadeLocal;
     private List<Libroescolar> listarLibros;
     private List<Libroescolar> listarMatematica;
+    private List<Libroescolar> listarComunicacion;
+    private List<Libroescolar> listarCienciayAmbiente;
+    private List<Libroescolar> listarPersonalSocial;
     private List<Libroescolar> listarCategorias;
     private List<Libroescolar> listarBruno;
     private List<Libroescolar> listarLumbreras;
@@ -147,5 +150,32 @@ public class ManagedLibroEscolar {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public List<Libroescolar> getListarComunicacion() {
+        listarComunicacion = libroescolarFacadeLocal.buscarComunicacion(libroescolar);
+        return listarComunicacion;
+    }
+
+    public void setListarComunicacion(List<Libroescolar> listarComunicacion) {
+        this.listarComunicacion = listarComunicacion;
+    }
+
+    public List<Libroescolar> getListarCienciayAmbiente() {
+        listarCienciayAmbiente = libroescolarFacadeLocal.buscarCiencia(libroescolar);
+        return listarCienciayAmbiente;
+    }
+
+    public void setListarCienciayAmbiente(List<Libroescolar> listarCienciayAmbiente) {
+        this.listarCienciayAmbiente = listarCienciayAmbiente;
+    }
+
+    public List<Libroescolar> getListarPersonalSocial() {
+        listarPersonalSocial = libroescolarFacadeLocal.buscarPersonalSocial(libroescolar);
+        return listarPersonalSocial;
+    }
+
+    public void setListarPersonalSocial(List<Libroescolar> listarPersonalSocial) {
+        this.listarPersonalSocial = listarPersonalSocial;
     }
 }

@@ -29,9 +29,18 @@ public interface LibroescolarFacadeLocal {
     List<Libroescolar> findRange(int[] range);
 
     int count();
+    //Filtro Categoria
     List<Libroescolar> buscarMate(Libroescolar le);
+    List<Libroescolar> buscarComunicacion(Libroescolar le);
+    List<Libroescolar> buscarCiencia(Libroescolar le);
+    List<Libroescolar> buscarPersonalSocial(Libroescolar le);
+    
+    //Validar si hay stock para mostrar pagina
     List<Libroescolar> buscarStockLibro(Libroescolar le);
+    
     List<Libroescolar> listarCategorias(Libroescolar le);
+    
+    //Filtro editorial
     List<Libroescolar> buscarBruno(Libroescolar le);
     List<Libroescolar> buscarLumbreras(Libroescolar le);
      List<Libroescolar> buscarCategoria(Libroescolar le);

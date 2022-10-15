@@ -7,12 +7,12 @@
     <h:outputStylesheet name="/css/miestilo.css"></h:outputStylesheet>
     <ui:composition template="/template/plantilla.xhtml">
         <ui:define name="titulo">
-            <h1 class="Titulos">Nuestros ultimos libros de Matematica</h1>
+            <h1 class="Titulos"> Nuestros ultimos libros de Ciencia y ambiente </h1>
         </ui:define>
         <ui:define name="contenido">
-             <h:form>
+            <h:form>
                 <div class="libro">
-                    <h:dataTable value="#{managedLibroEscolar.listarMatematica}" var="l" >
+                    <h:dataTable value="#{managedLibroEscolar.listarCienciayAmbiente}" var="l" >
                         <div class="gallery">
                             <h:column> 
                                 <div class="container">

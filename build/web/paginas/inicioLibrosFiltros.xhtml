@@ -45,19 +45,10 @@
                     <h:commandButton value="Filtrar por precio" class="button button2"></h:commandButton>
                 </h:column>
             </h:form>
-            <!--Filtrado-->
-            <h:form id="selector">
-                <h:selectOneMenu>
-                    <f:selectItem itemLabel="Seleccione Categoria" itemValue="0"></f:selectItem>
-                    <f:selectItem itemLabel="Matematica" itemValue="0"></f:selectItem>
-                    <f:selectItem itemLabel="Comunicacion" itemValue="0"></f:selectItem>
-                    <f:selectItem itemLabel="Personal social" itemValue="0"></f:selectItem>
-                </h:selectOneMenu>
-            </h:form>
         </div>
 
         <div class="column middle">
-
+            <h:form>
             <!-- Contenedor Principal  -->
             <div class="main-wrapper">
                 <!-- Titulo -->
@@ -73,13 +64,22 @@
 
                     <!-- Categorias -->
                     <ul class="list-category">
-                        <li><label for="all">Matematica</label></li>
-                        <li><label for="webdesign">Comunicacion</label></li>
-                        <li><label for="webdevelopment">Ciencia y a ambiente</label></li>
-                        <li><label for="graphicdesign">Personal Social</label></li>
+                        <li>
+                            <h:commandButton value="Matematica" class="button button1" action="libro_categorias.xhtml"></h:commandButton>
+                        </li>
+                        <li>
+                            <h:commandButton value="Comunicación" class="button button1" action="libro_comunicacion.xhtml"></h:commandButton>
+                        </li>
+                        <li>
+                            <h:commandButton value="Ciencia y ambiente" class="button button1" action="libro_ciencia.xhtml"></h:commandButton>
+                        </li>
+                        <li>
+                            <h:commandButton value="Personal Social" class="button button1" action="libro_personalSocial.xhtml"></h:commandButton>
+                        </li>
                     </ul>
                 </div>
             </div>
+            </h:form>
             <h:form>
                 <div class="libro">
                     <h:outputLabel id="Matematica" value=""></h:outputLabel>
@@ -93,7 +93,6 @@
                             <h:column> 
                                 <div class="container">
                                     <h:graphicImage value="#{l.imagen}" width="75%"></h:graphicImage>
-                                    <h:commandButton value="Matematicasdasdasd"  action="#{managedLibroEscolar.listarMatematica(l)}" actionListener="#{managedLibroEscolar.encontrarLibro(l)}"></h:commandButton>
                                 </div> 
                             </h:column>
                             <div class="desc">
@@ -102,8 +101,8 @@
                                     <p><h:outputText value="#{l.precio}"></h:outputText></p>
                                 </h:column>
                                 <h:column>
-                                    <h:commandButton value="Ver más" actionListener="#{managedLibroEscolar.encontrarLibro(l)}" action="libro_vermas.xhtml"></h:commandButton>
-                                    <h:commandButton value="Agregar al carro"></h:commandButton>
+                                    <h:commandButton value="Ver más" class="button button3" action="#{managedLibroEscolar.validarStock(l)}" actionListener="#{managedLibroEscolar.encontrarLibro(l)}" ></h:commandButton>
+                                    <h:commandButton value="Agregar al carro" class="button button3"></h:commandButton>
                                 </h:column>
                             </div>
                         </div>

@@ -32,8 +32,8 @@ public class ManagedNotificacionCliente {
     NotificacionclienteFacadeLocal notificacionclienteFacadeLocal;
     private Notificacioncliente notificacioncliente;
     
-    String correoenviado= notificacionclienteFacadeLocal.enviarCorreo(notificacioncliente);
-    public void enviarCorreo() throws MessagingException{
+    
+    public void enviarCorreo(String correo) throws MessagingException{
         String correoEnvia="anon.utp@gmail.com";
         String contrasena= "rixrkyowvrtzuyxm";
         String mensaje= "Ya hay stock";
@@ -53,8 +53,8 @@ public class ManagedNotificacionCliente {
         
         try{
             mail.setFrom(new InternetAddress (correoEnvia));
-            mail.addRecipient(Message.RecipientType.TO, new InternetAddress(correoenviado));
-            mail.setSubject("Prueba de envio");
+            mail.addRecipient(Message.RecipientType.TO, new InternetAddress(correo));
+            mail.setSubject("Prueba de envioo");
             mail.setText(mensaje);
             
             Transport transporte=sesion.getTransport("smtp");

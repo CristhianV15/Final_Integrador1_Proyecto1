@@ -238,6 +238,7 @@ div.desc {
  	color: #1396e1;
  	font-size: 0.5em;
  	font-weight: 700;
+        display: inline-block;
  }
 
  /* Lista de Categorias 
@@ -245,6 +246,7 @@ div.desc {
  .list-category {
  	display: block;
  	text-align: center;
+        display: inline-block;
  	margin-top: 20px;
  }
 

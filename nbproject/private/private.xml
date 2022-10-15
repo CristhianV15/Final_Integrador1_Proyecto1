@@ -4,27 +4,33 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/inicioLibrosFiltros.xhtml</file>
-            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/libros_notifi_stock.xhtml</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/EJB/NotificacionclienteFacade.java</file>
-            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/libro_categorias.xhtml</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/libro_ciencia.xhtml</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/nbproject/build-impl.xml</file>
-            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/EJB/LibroescolarFacadeLocal.java</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/EJB/LibroescolarFacade.java</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/inicioLibros.xhtml</file>
-            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/resources/css/estilo2filtros.css</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/inicioLumbreras.xhtml</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/carroCompras.xhtml</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/index.xhtml</file>
-            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/libro_vermas.xhtml</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/controlador/ManagedCarro.java</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/EJB/NotificacionclienteFacadeLocal.java</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/controlador/DatosEntrada.java</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/inicioBruno.xhtml</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/EJB/AbstractFacade.java</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/libros_notifi_stock.xhtml</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/libro_categorias.xhtml</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/EJB/LibroescolarFacadeLocal.java</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/resources/css/estilo2filtros.css</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/EJB/VentasFacade.java</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/libro_vermas.xhtml</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/controlador/configuraciones.java</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/controlador/ManagedLibroEscolar.java</file>
-            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/controlador/DatosEntrada.java</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/libro_personalSocial.xhtml</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/resources/css/miestilo.css</file>
-            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/inicioBruno.xhtml</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/controlador/ManagedNotificacionCliente.java</file>
-            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/EJB/AbstractFacade.java</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/entidad/Ventas.java</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/controlador/CategoriaBean.java</file>
+            <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/web/paginas/libro_comunicacion.xhtml</file>
             <file>file:/F:/Documents/GitHub/Final_Integrador1_Proyecto1/src/java/entidad/Notificacioncliente.java</file>
         </group>
     </open-files>

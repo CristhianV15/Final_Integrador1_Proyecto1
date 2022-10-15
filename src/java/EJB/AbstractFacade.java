@@ -80,6 +80,30 @@ public abstract class AbstractFacade<T> {
         return query.getResultList();
     }
     
+    //Buscar Comunicacion
+    public List<Libroescolar> buscarComunicacion(Libroescolar le){
+       String jpql= "SELECT l FROM Libroescolar l WHERE l.nombreCategoria = :nombreCategoria";
+        Query query = getEntityManager().createQuery(jpql);
+        query.setParameter("nombreCategoria", "Comunicacion");
+        return query.getResultList();
+    }
+    
+    //Buscar Ciencia
+    public List<Libroescolar> buscarCiencia(Libroescolar le){
+       String jpql= "SELECT l FROM Libroescolar l WHERE l.nombreCategoria = :nombreCategoria";
+        Query query = getEntityManager().createQuery(jpql);
+        query.setParameter("nombreCategoria", "Ciencia y ambiente");
+        return query.getResultList();
+    }
+    
+    //Buscar Personal social
+    public List<Libroescolar> buscarPersonalSocial(Libroescolar le){
+       String jpql= "SELECT l FROM Libroescolar l WHERE l.nombreCategoria = :nombreCategoria";
+        Query query = getEntityManager().createQuery(jpql);
+        query.setParameter("nombreCategoria", "Personal Social");
+        return query.getResultList();
+    }
+    
     //Buscar stock 
     public List<Libroescolar> buscarStockLibro(Libroescolar le){
         String jpql= "SELECT l FROM Libroescolar l WHERE l.idLibroEscolar = :idCodigo";
