@@ -28,5 +28,7 @@ public class NotificacionclienteFacade extends AbstractFacade<Notificacionclient
     public NotificacionclienteFacade() {
         super(Notificacioncliente.class);
     }
+
+   
     
 }

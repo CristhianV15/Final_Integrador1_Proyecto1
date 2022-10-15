@@ -8,7 +8,7 @@
     <h:outputStylesheet name="/css/miestilo.css"></h:outputStylesheet>
     <ui:composition template="/template/plantilla.xhtml">
         <ui:define name="titulo">
-            <h1 class="Titulos">Nuestros ultimos libros de la editorial Bruño</h1>
+            <h1 class="Titulos">Productos</h1>
         </ui:define>
         <ui:define name="contenido">
             <h:form>
@@ -25,9 +25,10 @@
                                     <p><h:outputText value="#{l.nombre}"></h:outputText></p>
                                     <p><h:outputText value="#{l.precio}"></h:outputText></p>
                                 </h:column>
+                                <h:inputHidden value="#{managedCarro.ventas.total}" class="form-control"> </h:inputHidden>
                                 <h:column>
                                     <p><h:commandButton value="Ver más" action="#{managedLibroEscolar.validarStock(l)}" actionListener="#{managedLibroEscolar.encontrarLibro(l)}" ></h:commandButton>
-                                        <h:commandButton value="Agregar al carro"></h:commandButton></p>
+                                        <h:commandButton value="Agregar al carro" action="#{managedCarro.guardarVenta()}"></h:commandButton></p>
                                 </h:column>
                             </div></div>
                     </h:dataTable>

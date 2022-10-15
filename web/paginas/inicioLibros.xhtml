@@ -27,7 +27,7 @@
                                 </h:column>
                                 <h:column>
                                     <p><h:commandButton value="Ver más" class="button button3" action="#{managedLibroEscolar.validarStock(l)}" actionListener="#{managedLibroEscolar.encontrarLibro(l)}" ></h:commandButton>
-                                        <h:commandButton value="Agregar al carro" class="button button3" ></h:commandButton></p>
+                                        <h:commandButton value="Agregar al carro" class="button button3" action="#{managedCarro.guardarVenta()}" ></h:commandButton></p>
                                 </h:column>
                             </div></div>
                     </h:dataTable>

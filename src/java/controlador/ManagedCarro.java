@@ -5,6 +5,7 @@
  */
 package controlador;
 
+import EJB.DetalleventaFacadeLocal;
 import EJB.VentasFacadeLocal;
 import entidad.Detalleventa;
 import entidad.Ventas;
@@ -23,6 +24,7 @@ import javax.faces.bean.SessionScoped;
 public class ManagedCarro {
     @EJB
     VentasFacadeLocal ventasFacadeLocal;
+    DetalleventaFacadeLocal detalleventaFacadeLocal;
     private List<Ventas> listarventas;
     private List<Detalleventa> listardetalle;
     private Ventas ventas;
@@ -67,12 +69,14 @@ public class ManagedCarro {
     }
     
     //Metodos guardar
-//    public void guardarVenta(){
-//        this.alumno.setIdApoderado(apoderado);
-//        this.alumno.setIdUsuarioCreado(usuario);
-//        this.alumnoFacadeLocal.create(alumno);
-//    }
-//    public void guardarDetalleVenta(){
-//       this.ventas.
-//    }
+    public void guardarVenta(){
+        //this.ventas.setIdCliente(cliente);
+        this.ventasFacadeLocal.create(ventas);
+        
+    }
+    public void guardarDetalleVenta(){
+       this.detalleventa.setIdVenta(ventas);
+       this.detalleventaFacadeLocal.create(detalleventa);
+    }
+    
 }

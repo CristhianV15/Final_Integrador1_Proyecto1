@@ -170,7 +170,7 @@ div.desc {
   display: grid;
   height: 400px;
   align-content: center;
-  grid-template-columns: auto auto ;
+  grid-template-columns: auto auto;
   gap: 10px;
   background-color: #008080;
   padding: 10px;

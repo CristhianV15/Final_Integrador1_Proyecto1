@@ -6,6 +6,7 @@
 package EJB;
 
 import entidad.Libroescolar;
+import entidad.Notificacioncliente;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -111,4 +112,7 @@ public abstract class AbstractFacade<T> {
         return query.getResultList();
     }
     
+    public String enviarCorreo(Notificacioncliente nc){
+       return nc.getCorreo();
+    }
 }

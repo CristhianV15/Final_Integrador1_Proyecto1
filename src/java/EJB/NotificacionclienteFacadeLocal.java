@@ -27,7 +27,8 @@ public interface NotificacionclienteFacadeLocal {
     List<Notificacioncliente> findAll();
 
     List<Notificacioncliente> findRange(int[] range);
-
+    
+    public String enviarCorreo(Notificacioncliente nc);
     int count();
     
 }

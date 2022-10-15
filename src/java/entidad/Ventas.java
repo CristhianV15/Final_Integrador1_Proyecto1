@@ -59,6 +59,7 @@ public class Ventas implements Serializable {
     private Clientes idCliente;
 
     public Ventas() {
+        estado=0;
     }
 
     public Ventas(Integer idVenta) {
