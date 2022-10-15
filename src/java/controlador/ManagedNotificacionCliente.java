@@ -18,6 +18,7 @@ import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.activation.*;
+import javax.annotation.PostConstruct;
 import javax.mail.*;
 import javax.mail.internet.*;
 
@@ -32,8 +33,11 @@ public class ManagedNotificacionCliente {
     NotificacionclienteFacadeLocal notificacionclienteFacadeLocal;
     private Notificacioncliente notificacioncliente;
     
-    
-    public void enviarCorreo(String correo) throws MessagingException{
+    @PostConstruct
+    public void init() {
+        notificacioncliente = new Notificacioncliente();
+    }
+    public void datoCorreo() throws MessagingException{
         String correoEnvia="anon.utp@gmail.com";
         String contrasena= "rixrkyowvrtzuyxm";
         String mensaje= "Ya hay stock";
@@ -53,7 +57,7 @@ public class ManagedNotificacionCliente {
         
         try{
             mail.setFrom(new InternetAddress (correoEnvia));
-            mail.addRecipient(Message.RecipientType.TO, new InternetAddress(correo));
+            mail.addRecipient(Message.RecipientType.TO, new InternetAddress(notificacioncliente.getCorreo()));
             mail.setSubject("Prueba de envioo");
             mail.setText(mensaje);
             
